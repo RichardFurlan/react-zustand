@@ -1,0 +1,202 @@
+.column{
+    background-color: var(--COLOR-GRAY-DARK);
+    min-height: 20rem;
+    color: #fff;
+    width: 33%;
+    max-width: 25rem;
+    margin: 1rem 1rem;
+    border-radius: 4px;
+    padding: 0 0.5rem;
+    border: dashed transparent 4px;
+}
+
+.column.drop {
+    border-color: white;
+}
+
+.titleWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleWrapper button {
+    all: unset;
+    background-color: white;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.titleWrapper button:hover {
+    background-color: var(--COLOR-GRAY-LIGHT);
+}
+
+.Modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .close{
+    color: black;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    animation: backwards 1.3s ease-in-out;
+  }
+  
+  .close:hover{
+    color: var(--COLOR-GRAY-LIGHT);
+  }
+
+  .modalContent {
+    background: white;
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+    height: 20rem;
+    width: 40rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: white;
+    background-color: #171717;
+    padding: 1em 2em;
+    border: none;
+    border-radius: .6rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  button span:not(:nth-child(6)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    background-color: #0c66ed;
+    border-radius: 50%;
+    transition: .6s ease;
+  }
+  
+  button span:nth-child(6) {
+    position: relative;
+  }
+  
+  button span:nth-child(1) {
+    transform: translate(-3.3em, -4em);
+  }
+  
+  button span:nth-child(2) {
+    transform: translate(-6em, 1.3em);
+  }
+  
+  button span:nth-child(3) {
+    transform: translate(-.2em, 1.8em);
+  }
+  
+  button span:nth-child(4) {
+    transform: translate(3.5em, 1.4em);
+  }
+  
+  button span:nth-child(5) {
+    transform: translate(3.5em, -3.8em);
+  }
+  
+  button:hover span:not(:nth-child(6)) {
+    transform: translate(-50%, -50%) scale(4);
+    transition: 1.5s ease;
+  }
+
+
+  .input-container {
+    --c-text: rgb(50, 50, 80);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45 , 190);
+    display: grid;
+    gap: 1ch;
+    position: relative;
+    max-width: 290px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+  }
+  
+  .input-field {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 100%;
+  }
+  
+  .input-field:not(:placeholder-shown) + .input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+  }
+  
+  .input-field:invalid {
+    --c-border: rgb(230, 85, 60);
+    --c-text: rgb(230, 85, 60);
+    --c-outline: rgb(230, 85, 60);
+  }
+  
+  .input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+  }
+  
+  .input-field:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+  }
+  
+  .input-label {
+    --timing: 200ms ease-in;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: transform var(--timing),
+      opacity var(--timing);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: var(--c-text);
+    font-weight: 500;
+  }
+  .textarea {
+    width: 70%; /* Ocupa a largura total do elemento pai */
+    min-height: 4rem; /* Altura mínima desejada */
+    padding: 0.5rem; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda com cor de destaque */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    resize: vertical;
+    max-height: 10rem; /* Permite redimensionamento vertical */
+    outline: none; /* Remove a borda de foco padrão */
+  }
+  
+  /* Estilo para o textarea quando em foco (opcional) */
+  .textarea:focus {
+    border-color: #007bff; /* Cor da borda quando em foco */
+  }  

@@ -1,0 +1,43 @@
+.task {
+    background-color: white;
+    border-radius: 4px;
+    min-height: 5rem;
+    color: black;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    cursor: grab;
+}
+
+.buttomWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.status{
+    font-size: small;
+    background-color: var(--COLOR-GRAY-LIGHT);
+    padding: 0.15rem;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.ToDo{
+ background: var(--COLOR-GRAY-LIGHT);
+}
+
+.InProgress{
+    background:var(--COLOR-ONGOING) ;
+}
+
+.Done{
+    background:var(--COLOR-DONE) ;
+}
+
+.task img {
+    width: 1.15rem;
+    height: 1.15rem;
+    cursor: pointer;
+}
